@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    name: application-deployment
+  name: application
+spec:
+  replicas: 4
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      name: application-deployment
+  template:
+    metadata:
+      labels:
+        name: application-deployment
+    spec:
+      containers:
+        - image: hrohden/udacitycapstone:2.0.0
+          name: application
+          ports:
+            - containerPort: 8080

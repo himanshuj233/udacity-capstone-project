@@ -1,0 +1,2 @@
+# Udacity Capstone Project
+This application is intended to be the final project of the Cloud DevOps Engineer Udacity Nanodegree program. As it develops, the author will perform some steps that involve what was learned during the course, such as continuous integration, cloud computing, and deployment pipelines.
